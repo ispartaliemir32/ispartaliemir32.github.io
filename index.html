@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Emir Mustafa Bıçakçı – IT System Engineer, Azure en cloud-infrastructuur.">
+<title>Emir Mustafa Bıçakçı</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one centered business card, name left, a Terraform-style "resource" block right; stacks on phone */
+:root {
+  --bg: #eef2f6;
+  --card: #ffffff;
+  --fg: #142030;
+  --muted: #56657a;
+  --line: #d6dee8;
+  --accent: #1d5fd1;
+  --code-bg: #f4f7fb;
+  --kw: #8a3fb8;
+  --str: #1f7a52;
+  --display: "Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d141e; --card: #152131; --fg: #e6edf5; --muted: #95a4b8; --line: #263649;
+    --accent: #6ea8ff; --code-bg: #101a27; --kw: #d19bf2; --str: #6fd3a0; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d141e; --card: #152131; --fg: #e6edf5; --muted: #95a4b8; --line: #263649;
+  --accent: #6ea8ff; --code-bg: #101a27; --kw: #d19bf2; --str: #6fd3a0; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { min-height: 100%; }
+body {
+  background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.6;
+  display: grid; place-items: center; min-height: 100vh; padding-inline: 16px; padding-block: 48px;
+}
+.card {
+  width: 100%; max-width: 880px; background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+  display: grid; grid-template-columns: 1.1fr 1fr; overflow: hidden;
+}
+.who { padding: 44px 40px; display: flex; flex-direction: column; gap: 20px; min-width: 0; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1 { font-family: var(--display); font-weight: 700; font-size: clamp(2rem, 5vw, 2.8rem); line-height: 1.05; margin: 0; text-wrap: balance; letter-spacing: -.01em; }
+.role { font-size: 1.15rem; margin: 0; color: var(--fg); }
+.role b { color: var(--accent); font-weight: 500; }
+.bio { color: var(--muted); margin: 0; max-width: 42ch; }
+.stack { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
+.stack li { font-family: var(--mono); font-size: 13px; padding: 3px 10px; border: 1px solid var(--line); border-radius: 999px; color: var(--fg); }
+.links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 4px; }
+.links a {
+  display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 500;
+  color: var(--fg); padding: 9px 16px; border: 1px solid var(--line); border-radius: 8px; transition: border-color .15s, color .15s;
+}
+.links a:hover, .links a:focus-visible { border-color: var(--accent); color: var(--accent); outline: none; }
+.links svg { width: 18px; height: 18px; fill: currentColor; }
+.code { background: var(--code-bg); border-left: 1px solid var(--line); padding: 44px 32px; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
+.code .file { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+pre { margin: 0; font-family: var(--mono); font-size: 13.5px; line-height: 1.75; overflow-x: auto; color: var(--fg); }
+.k { color: var(--kw); } .s { color: var(--str); } .c { color: var(--muted); }
+.projects { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; border-top: 1px dashed var(--line); padding-top: 18px; }
+.projects a { color: var(--fg); text-decoration: none; display: block; }
+.projects a span { display: block; font-family: var(--mono); font-size: 13px; color: var(--accent); }
+.projects a small { color: var(--muted); font-size: 13.5px; line-height: 1.45; display: block; }
+.projects a:hover span, .projects a:focus-visible span { text-decoration: underline; }
+footer { margin-top: 18px; text-align: center; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+@media (max-width: 760px) {
+  .card { grid-template-columns: 1fr; }
+  .who, .code { padding: 32px 24px; }
+  .code { border-left: 0; border-top: 1px solid var(--line); }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+
+<main>
+  <article class="card">
+    <section class="who">
+      <span class="eyebrow">Nederland · IT &amp; Cloud</span>
+      <h1>Emir Mustafa Bıçakçı</h1>
+      <p class="role">IT System Engineer met focus op <b>Azure</b> en cloud&#8209;infrastructuur</p>
+      <p class="bio">Ik bouw en beheer infrastructuur als code: van Azure-landingszones met Terraform en GitHub Actions tot security-detecties met Defender, Sentinel en KQL.</p>
+      <ul class="stack" aria-label="Vaardigheden">
+        <li>Azure</li><li>Terraform</li><li>Kubernetes</li><li>GitHub Actions</li><li>DevOps</li><li>KQL</li><li>APIs</li>
+      </ul>
+      <nav class="links" aria-label="Profielen">
+        <a href="https://www.linkedin.com/in/emir-mustafa-b%C4%B1%C3%A7ak%C3%A7%C4%B1-13401630a/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/ispartaliemir32" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.1 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.1.9 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+          GitHub
+        </a>
+      </nav>
+    </section>
+
+    <aside class="code" aria-label="Profiel als Terraform-resource">
+      <span class="file">main.tf</span>
+<pre><span class="k">resource</span> <span class="s">"engineer"</span> <span class="s">"emir"</span> {
+  role     = <span class="s">"IT System Engineer"</span>
+  location = <span class="s">"westeurope"</span>
+  focus    = [<span class="s">"cloud"</span>, <span class="s">"infra"</span>,
+              <span class="s">"security"</span>, <span class="s">"devops"</span>]
+
+  <span class="c"># open voor nieuwe projecten</span>
+  available = <span class="k">true</span>
+}</pre>
+      <div class="projects">
+        <span class="eyebrow">Projecten</span>
+        <a href="https://github.com/ispartaliemir32/azure-enterprise-platform" target="_blank" rel="noopener">
+          <span>azure-enterprise-platform</span>
+          <small>Azure-infrastructuurlab met Terraform, GitHub Actions en OIDC.</small>
+        </a>
+        <a href="https://github.com/ispartaliemir32/cloud-security-lab" target="_blank" rel="noopener">
+          <span>cloud-security-lab</span>
+          <small>Defender/Sentinel-detecties, KQL-queries en hardening-scenario's.</small>
+        </a>
+      </div>
+    </aside>
+  </article>
+  <footer>© 2026 Emir Mustafa Bıçakçı</footer>
+</main>
+</body>
+</html>
